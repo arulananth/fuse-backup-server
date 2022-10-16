@@ -1,0 +1,206 @@
+
+$panal-clor :#9967a5;
+$test : #ffffff;
+
+:host /deep/ {
+
+#admin-wrapper
+{
+
+
+      @media only screen and (max-width: 560px) {
+       .m-pad1
+       {
+         padding: 1rem;
+       }
+      } 
+     /*admin-footer*/
+      .admin-footer
+        {
+            @media only screen and (max-width: 767px){
+            padding-left:20px;
+              padding-right:20px;
+            } 
+            .bgs
+            {
+              padding: 20px 0px;
+            }
+        } /*admin-footer*/
+        .close-btn{
+              cursor: pointer;
+        }
+
+
+         /*admin-content*/
+       .admin-content 
+       {
+          display: flex;
+          flex: 1 1 auto;       
+          padding-bottom:0px;
+          min-width: 0;
+          @media only screen and (max-width: 767px)
+          {
+              padding: 20px;
+          } 
+
+          .admin-main-wrapper 
+          {
+              display: flex;
+              flex-direction: column;
+              flex: 1 1 auto;
+              min-width: 0;
+
+              .panelHeader
+              {
+                  background-color: $panal-clor;
+          
+                  .main-tille
+                  {
+                      color: $test;
+                      font-size: 1.8rem;
+                  }
+              } 
+
+               .admin-form-controll 
+              {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 auto;
+                position: relative;
+              }
+              .admin-button-option-row 
+              {
+                display: block;
+                >button {
+                  margin-right: .5rem;
+                }
+              }    
+          }    
+        }  /*admin-content*/
+   
+    .fwt100
+    {
+      font-weight: 100;
+    }
+    .mat-button-focus-overlay
+    {
+      background-color: rgba(0,0,0,0);
+    }
+    
+    .mat-form-field-infix 
+    {
+        border-top: 0.2rem solid transparent !important; 
+     }
+     .mat-form-field-appearance-outline {
+         .mat-form-field-outline-thick 
+         {
+             color: rgba(0, 0, 0, 0.12);
+             .mat-form-field-outline-start
+             {
+                  border-width:1px;
+             }
+             .mat-form-field-outline-end
+             {
+                  border-width:1px;
+                  border-radius:0px !important;
+             }
+         }
+         .mat-form-field-outline 
+         {
+            color: rgba(0, 0, 0, 0.12);
+         }
+
+      }
+
+      .mat-expansion-panel-body
+      {
+        padding-left:0;
+        padding-right:0;
+      }
+      .mat-expansion-panel
+      {
+        box-shadow: none!important; 
+      }
+      
+      .br-tb-dotted
+      {
+        border-top: 2px dotted #ccc;
+        border-bottom: 2px dotted #ccc;
+      }
+
+      .br-t-dotted
+      {
+        border-top: 2px dotted #ccc;
+        
+      }
+      .cred
+      {
+        color:red !important;
+      }
+      .mr-r1
+      {
+        margin-right: 1rem;
+      }
+      .mr-b2
+      {
+        margin-bottom:2rem;
+      }
+       .pd-t2
+      {
+        padding-top:2rem;
+      }
+
+      .mr-tb5
+      {
+        margin-bottom:2rem !important;
+        margin-top:2rem !important;
+      }
+      .mr-tb1
+      {
+        margin-top: 1.5rem;
+       margin-left: 1.5rem;
+      }
+      .mr-t2
+      {
+        margin-top:2rem;
+      
+      }
+      .btnblue
+      {
+        background-color:#3498db;
+        color: #fff;
+        border:1px solid #3498db;
+      }
+
+      .btndgray {
+          background-color: #ccc;
+          color: #fff;
+          border: 1px solid #ccc;
+       }
+
+       .btngreen
+      {
+        background-color:#2ecc71;
+        color:#fff !important;
+        border:1px solid #2ecc71;
+      }
+
+      .btngray
+      {
+        background-color:#ecf0f1;
+        border:1px solid #ecf0f1;
+      }
+      .btnred
+      {
+            background-color: #d80027 !important;
+            color:#fff !important;
+           border: 1px solid #d80027;
+      }
+      .btnyellow
+      {
+        background-color:#f1c40f;
+        color:#fff !important;
+        border:1px solid #f1c40f;
+      }
+  }
+}

@@ -1,0 +1,124 @@
+<div class="page-layout blank" id="adminforms-wrapper">
+   <!-- form content/-->
+    <div class="admin-content">
+        <div class="admin-main-wrapper">
+
+            <mat-expansion-panel [expanded]="true" [disabled]="true">
+
+                <!-- main panal-title -->
+                <mat-expansion-panel-header class="panelHeader">
+                    <mat-panel-title class="main-tille">
+                        <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column" fxFlex>
+                            <div fxFlex="50" fxLayoutAlign="center start" fxLayout="column" fxLayoutAlign.xs="center center">
+                              {{'verifychain.verifychaininstance' | translate}}
+                            </div>
+                            <div fxFlex="50" fxLayoutAlign="center end" fxLayout="column" fxLayoutAlign.xs="center center">
+                              <button mat-button class="user-button exp-button" (click)="openTop()">
+                                <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+                                   <mat-icon class="s-16 mr-12">add_circle_outline</mat-icon>
+                                    <span class="username">{{'verifychain.addchain' | translate}}</span>
+                                    
+                                </div>
+                               </button>
+                            </div>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- end title -->
+                <!-- main form-start -->
+
+                <div class="admin-main-form mr-tb5  m-pad1">
+                    <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                    	<div fxFlex="100" fxLayoutAlign="center center" [fxLayout]="'row'" fxLayoutAlign.xs="center center">
+                        <div fxFlex="100">
+                         
+           <!-- table --->
+                      <table mat-table [dataSource]="dataSource" >
+                        <!-- Item Column -->
+                        <ng-container matColumnDef="index">
+                          <th mat-header-cell *matHeaderCellDef>{{'verifychain.No' | translate}}</th>
+                          <td mat-cell *matCellDef="let transaction;let i=index" data-label="No"> {{i+1}}</td>
+                         
+
+                        </ng-container>
+                        <ng-container matColumnDef="inst_name">
+                          <th mat-header-cell *matHeaderCellDef>{{'verifychain.InstanceName' | translate}}</th>
+                          <td mat-cell *matCellDef="let transaction" data-label="Instance Name"> {{transaction.inst_name}} </td>
+                          
+                        </ng-container>
+                        <!-- Cost Column -->
+                        <ng-container matColumnDef="inst_key">
+                          <th mat-header-cell *matHeaderCellDef>{{'verifychain.InstanceKey' | translate}}</th>
+                          <td mat-cell *matCellDef="let transaction" data-label="Instance Name"> {{transaction.inst_key}} </td>
+                          
+                        </ng-container>
+
+                        <ng-container matColumnDef="created_at">
+                          <th mat-header-cell *matHeaderCellDef>{{'verifychain.CreatedDate' | translate}}</th>
+                          <td mat-cell *matCellDef="let transaction" data-label="Created Date"> {{transaction.created_at}}</td>
+                          
+                        </ng-container>
+                        <ng-container matColumnDef="active_status">
+                          <th mat-header-cell *matHeaderCellDef>{{'verifychain.Status' | translate}}</th>
+                          <td mat-cell *matCellDef="let transaction" data-label="Status">
+                            {{'verifychain.'+transaction.active_status | translate}}
+                               
+                          </td>
+                          
+                        </ng-container>
+
+                        <ng-container matColumnDef="inst_id">
+                          <th mat-header-cell *matHeaderCellDef class="wi150px">{{'verifychain.Action' | translate}}</th>
+                          <td mat-cell *matCellDef="let transaction;let c=index" data-label="Loreum Ipsum">
+
+                            <button mat-button class="user-button btnedit mr-br mr-r1" (click)="openEdit(transaction,c)">
+                                 
+                                 <mat-icon class="s-16">edit</mat-icon>
+                              
+                            </button>
+                            <button mat-button class="user-button btndelete mr-br mr-r1" (click)="openDelete(transaction,c)">
+                             
+                                 <mat-icon class="s-16">delete</mat-icon>
+                                
+                            </button>
+                           
+                          </td>
+                          
+                        </ng-container>
+
+                       
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                            class="first-header-row">
+                        </tr>
+                        
+                        
+
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;let i = index"  class="table-content-row"></tr>
+
+
+                      </table>
+
+                    </div>             <!-- table-->
+
+        </div>
+
+                    </div>
+                </div>
+                <!-- main form-end -->
+            
+            </mat-expansion-panel>
+        </div>
+
+    </div><!-- form content/-->
+
+
+
+
+
+    <div >
+
+    </div>
+</div>
+
+
+

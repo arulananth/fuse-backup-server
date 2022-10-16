@@ -1,0 +1,10 @@
+<div   class="dashcard profilecard">
+    <div fxFlex="100" fxLayout="row"  fxLayoutAlign="center center" [style.background]="profileData?.colorLight" class="pd-20 cwhite br-tr3">
+        
+        {{profileData?.title}}
+    </div>
+    <div  fxFlex="100" fxLayout="row" fxLayoutAlign="center center" [style.background]="profileData?.colorDark" class="pd-20 cwhite br-br3 font4">
+              <img class="flag mr-8 br-5" [src]="'assets/images/avatars/'+profileData?.imgs+'.jpg'">
+       
+    </div>
+</div>

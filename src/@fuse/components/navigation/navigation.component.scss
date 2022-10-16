@@ -1,0 +1,53 @@
+@import 'src/@fuse/scss/fuse';
+
+fuse-navigation {
+    display: flex;
+    flex: 1 0 auto;
+
+    #main-navigation {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav
+	{
+		.nav-item
+		{
+			border-bottom:1px solid #ffffff !important;
+			.nav-link
+			{
+				border-bottom:1px solid #ffffff !important;
+				&.active
+				{
+					background-color:#7d5986 !important;
+				}
+			}
+			&.nav-collapse
+			{
+				.nav-link
+				 {
+				 	border-bottom:0px solid #ffffff !important;
+				 }
+				 .children
+				 {
+				 	background: #886192 !important;
+				 	.nav-item
+				 	{
+				 		.nav-link
+				 		{
+				 			background: #886192;
+				 		}
+				 	}
+				 }
+				 &.open
+				 {
+				 	 background: #7d5986;
+				 }
+			}
+		}
+		
+	    
+	}
+
+}

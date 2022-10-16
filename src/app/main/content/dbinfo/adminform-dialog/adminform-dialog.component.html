@@ -1,0 +1,219 @@
+<!-- modal dialog-->
+<div id="admin-wrapper">
+ <form class="admin-form" [formGroup]="addedForm" (ngSubmit)="onSubmit()">
+  <!-- modal header-->
+  <div fxLayout="row" fxLayoutGap="2%">
+      <div fxFlex="93%">
+        <h2 mat-dialog-title class="fwt100">{{'dbinfo.adddb' | translate}}</h2>
+      </div>
+      <div fxFlex="5%">
+        <mat-dialog-actions>
+          <button mat-dialog-close class="close-btn">
+            <mat-icon class="s-16 mr-5">close</mat-icon>
+          </button>
+        </mat-dialog-actions>
+      </div>
+  </div><!-- modal header / -->
+
+  <mat-divider></mat-divider>
+    
+  
+  <mat-dialog-content>
+    <!-- modal content / -->
+    <div class="admin-content mr-t2">
+      <div class="admin-main-wrapper admin-upload">
+          
+                
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                     <div class="admin-form-controll pad-r10">
+                      <mat-label>{{'dbinfo.verify' | translate}}</mat-label>
+                      <mat-form-field>
+                          <mat-select formControlName="verify" required>
+                            
+                           <mat-option *ngFor="let g of verifyData" [value]="g.inst_id">{{g.inst_name}}</mat-option>
+                          </mat-select>
+                          <mat-error *ngIf="submitted && f.verify.errors">{{'common.enordis' | translate}} {{'dbinfo.verify' | translate}}</mat-error>
+                       </mat-form-field>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                     <div class="admin-form-controll pad-r10">
+                      <mat-label>{{'dbinfo.dbtype' | translate}}</mat-label>
+                      <mat-form-field>
+                          <mat-select formControlName="dbtype" required>
+                          <mat-option *ngFor="let g of settings.db_type" [value]="g">{{g}}</mat-option>
+                           
+                          </mat-select>
+                          <mat-error *ngIf="submitted && f.dbtype.errors">{{'common.enordis' | translate}} {{'dbinfo.dbtype' | translate}}</mat-error>
+                       </mat-form-field>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                     <div class="admin-form-controll pad-r10">
+                      <mat-label>{{'dbinfo.dbdriver' | translate}}</mat-label>
+                      <mat-form-field >
+                          <mat-select formControlName="dbdriver" required>
+                            <mat-option *ngFor="let g of settings.db_driver" [value]="g">{{g}}</mat-option>
+                           
+                           
+                          </mat-select>
+                          <mat-error *ngIf="submitted && f.dbdriver.errors">{{'common.enordis' | translate}} {{'dbinfo.dbdriver' | translate}}</mat-error>
+                       </mat-form-field>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbinfo.sname' | translate}}</mat-label>
+                          <mat-form-field>                                   
+                                    <input matInput  formControlName="sname" required>
+                                     <mat-error *ngIf="submitted && f.sname.errors">{{'common.please' | translate}} {{'dbinfo.sname' | translate}}</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbinfo.dbname' | translate}}</mat-label>
+                          <mat-form-field>                                   
+                                    <input matInput  formControlName="dbname" required>
+                                     <mat-error *ngIf="submitted && f.dbname.errors">{{'common.please' | translate}} {{'dbinfo.dbname' | translate}}</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbinfo.dbusername' | translate}}</mat-label>
+                          <mat-form-field>                                   
+                                    <input matInput  formControlName="dbusername" required>
+                                     <mat-error *ngIf="submitted && f.dbusername.errors">{{'common.please' | translate}} {{'dbinfo.dbusername' | translate}}</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbinfo.dbpassword' | translate}}</mat-label>
+                          <mat-form-field>                                   
+                                    <input matInput  formControlName="dbpassword" required>
+                                     <mat-error *ngIf="submitted && f.dbpassword.errors">{{'common.please' | translate}} {{'dbinfo.dbpassword' | translate}}</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbinfo.dbserver' | translate}}</mat-label>
+                          <mat-form-field>                                   
+                                    <input matInput  formControlName="dbserver" required>
+                                     <mat-error *ngIf="submitted && f.dbserver.errors">{{'common.please' | translate}} {{'dbinfo.dbserver' | translate}}</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbinfo.dbport' | translate}}</mat-label>
+                          <mat-form-field>                                   
+                                    <input matInput  formControlName="port" required>
+                                     <mat-error *ngIf="submitted && f.port.errors">{{'common.please' | translate}} {{'dbinfo.dbport' | translate}}</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+         
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                     <div class="admin-form-controll pad-r10">
+                      <mat-label>{{'dbinfo.dbstatus' | translate}}</mat-label>
+                      <mat-form-field >
+                          <mat-select formControlName="dbstatus" required>
+                            <mat-option value="1">{{'common.enable' | translate}}</mat-option>
+                            <mat-option value="2">{{'common.disable' | translate}}</mat-option>
+                           
+                          </mat-select>
+                          <mat-error *ngIf="submitted && f.dbstatus.errors">{{'common.enordis' | translate}} {{'dbinfo.dbstatus' | translate}}</mat-error>
+                       </mat-form-field>
+                      </div>
+                  </div>
+              </div>
+          </div>
+         <!--form-end /-->
+         
+            
+        </div>
+    </div><!-- modal content/ -->
+
+    <mat-divider></mat-divider>
+
+    <!-- modal footer/ -->
+    <div class="admin-footer">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" class="bgs">
+        <div fxFlex="100" fxLayoutAlign="end center" fxLayoutAlign.xs="center center" [fxLayout]="'row wrap'">
+           <!--btn 1-->
+            <button *ngIf="!submitted" type="button" mat-button class="user-button btngray mr-br mr-r1 mbl-mr-tb" (click)="onNoClick('')" type="button">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">clear</mat-icon>
+                <span class="username">{{'common.clear' | translate}}</span>
+            </div>
+           </button><!--btn 1 /-->
+          
+           <!--btn 3-->
+          <button *ngIf="!submitted" type="submit" mat-button class="user-button btngreen mr-br mr-r1">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">save</mat-icon>
+                <span class="username">{{'common.save' | translate}}</span>
+            </div>
+           </button><!--btn 3/-->
+           <div *ngIf="submitted" fxLayout="row" fxLayoutAlign="center center">
+                          <mat-spinner></mat-spinner>
+            </div>
+        </div>
+      </div>
+    </div><!-- modal footer/ -->
+
+
+  </mat-dialog-content>
+</form>
+</div><!-- modal dialog/-->

@@ -1,0 +1,98 @@
+<!-- modal dialog-->
+<div id="admin-wrapper">
+ <form class="admin-form" [formGroup]="addedForm">
+  <!-- modal header-->
+  <div fxLayout="row" fxLayoutGap="2%">
+      <div fxFlex="93%">
+        <h2 mat-dialog-title class="fwt100">{{'dbreport.new' | translate}}</h2>
+      </div>
+      <div fxFlex="5%">
+        <mat-dialog-actions>
+          <button mat-dialog-close class="close-btn">
+            <mat-icon class="s-16 mr-5">close</mat-icon>
+          </button>
+        </mat-dialog-actions>
+      </div>
+  </div><!-- modal header / -->
+
+  <mat-divider></mat-divider>
+    
+  
+  <mat-dialog-content>
+    <!-- modal content / -->
+    <div class="admin-content mr-t2">
+      <div class="admin-main-wrapper admin-upload">
+        <div class="admin-main-form adminform-success m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">                
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <h3><b>Record Id</b></h3>
+                        
+                      </div>
+                    </div>
+              </div>
+        </div>
+        <!--form-start -->
+          <div class="admin-main-form adminform-success m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">                
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                     
+<table mat-table [dataSource]="dataSource" >
+  <!-- Item Column -->
+  <ng-container matColumnDef="th1">
+    <th mat-header-cell *matHeaderCellDef>#</th>
+    <td mat-cell *matCellDef="let transaction" data-label="Loreum Ipsum"> {{transaction.th1}} </td>
+
+  </ng-container>
+
+  <!-- Cost Column -->
+  <ng-container matColumnDef="th2">
+    <th mat-header-cell *matHeaderCellDef>Loreum Ipsum</th>
+    <td mat-cell *matCellDef="let transaction" data-label="Loreum Ipsum">{{transaction.th2}}</td>
+  
+  </ng-container>
+
+
+
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"  class="table-content-row"></tr>
+
+
+</table>
+                          
+                      </div>
+                
+                  </div>
+                  
+              </div>
+          </div><!--form-end /-->
+
+
+                
+         
+            
+        </div>
+    </div><!-- modal content/ -->
+
+   
+
+    <!-- modal footer/ -->
+    <div class="admin-footer">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" class="bgs">
+        <div fxFlex="100" fxLayoutAlign="end center" fxLayoutAlign.xs="center center" [fxLayout]="'row wrap'">
+          <!--btn 1-->
+            <button type="button" mat-button class="user-button btngray mr-br mr-r1 mbl-mr-tb" (click)="onNoClick()" type="button">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">clear</mat-icon>
+                <span class="username">Close</span>
+            </div>
+           </button><!--btn 1 /-->
+         
+        </div>
+      </div>
+    </div><!-- modal footer/ -->
+
+
+  </mat-dialog-content>
+</form>
+</div><!-- modal dialog/-->

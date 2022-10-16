@@ -1,0 +1,47 @@
+$dilog-title :#505458;
+
+
+.sample-modal-content {
+    flex:  1;
+    display: block;
+    /* display: flex; */
+}
+
+.sample-main-remove-dialog{
+    padding: 10px;
+}
+
+
+.sample-modal-header{
+    h2{
+        font-weight: 300;
+        color: $dilog-title;
+        font-size: 2rem;
+    }
+}
+
+.main-remove-buttons{
+  margin-top: 1rem;
+  float: right;
+}
+
+.sample-form-controll {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .sub-button-option-row {
+    display: block;
+    >button {
+      margin-right: .5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    button {
+      margin-bottom: .5rem;
+    }
+  }

@@ -1,0 +1,240 @@
+$panal-clor :#9967a5;
+$test : #ffffff;
+
+:host /deep/
+{
+#adminforms-wrapper {
+  .mat-table .mat-row:nth-child(even) {background: #f3f3f3}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+    .admin-footer
+    {
+      
+      padding-left:32px;
+      padding-right:32px;
+      margin-bottom:2rem;
+      @media only screen and (max-width: 767px){
+            padding-left:20px;
+            padding-right:20px;
+        } 
+
+    
+          .bgs {
+                background: #ffffff;
+                padding: 20px;
+                border: 1px solid #e6e6e6;
+                border-top:none !important;
+             }
+   
+    }
+
+    .admin-pagination
+    {
+      
+      padding-left:32px;
+      padding-right:32px;
+      
+      @media only screen and (max-width: 767px){
+            padding-left:20px;
+            padding-right:20px;
+        } 
+
+    
+          .bgs {
+                background: #ffffff;                
+                border: 1px solid #e6e6e6;
+                border-top:none !important;
+                border-bottom:none!important;
+             }
+   
+    }
+    .admin-content {
+        display: flex;
+        flex: 1 1 auto;
+        padding: 32px;
+        padding-bottom:0px;
+        min-width: 0;
+        @media only screen and (max-width: 767px){
+            padding: 20px;
+            padding-bottom:0px;
+        } 
+        .admin-upoad
+        {
+          margin:0 auto;
+          background-color:#e6eaed;
+          padding:20px;
+          .upload-img
+            {
+              button{
+                margin-bottom: 2rem;
+              }
+              p
+              {
+                color:#e64433;
+                margin-bottom: 0.5rem;
+                margin-top:0;
+
+              }
+              .preview
+              {
+                background-color: #fff;
+                padding:15px;
+                img{
+                  border-radius:5rem;
+                }
+              }
+
+            }
+        }
+        .admin-main-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-width: 0;
+            border-left: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+            
+            .panelHeader{
+                background-color: $panal-clor;
+        
+                .main-tille{
+                    color: $test;
+                    font-size: 1.8rem;
+                }
+            }
+            .admin-form-controll 
+                     {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1 1 auto;
+                        margin-bottom: 1.5rem;
+                        position: relative;
+
+                     }
+                    .admin-button-option-row 
+                    {
+                      display: block;
+                      >button {
+                        margin-right: .5rem;
+                      }
+                    } 
+           .exp-button 
+           {
+            background:#f6e8ff;
+            color:#9967a5;
+            line-height:2rem;
+           }
+                   
+        }    
+    } 
+    .mat-button-focus-overlay
+    {
+      background-color: rgba(0,0,0,0);
+    }
+
+    .mat-expansion-panel
+    {
+      box-shadow:none !important;
+    }
+      .mr-tb5
+      {
+        margin-bottom:0rem !important;
+        margin-top:2rem !important;
+      }
+
+      
+      .br-tb-dotted
+      {
+        border-top: 2px dotted #ccc;
+        border-bottom: 2px dotted #ccc;
+      }
+
+      .br-t-dotted
+      {
+        border-top: 2px dotted #ccc;
+        
+      }
+
+      @media only screen and (max-width: 560px) {
+       .m-pad1
+       {
+         padding: 1rem;
+       }
+      } 
+
+      .cred
+      {
+        color:red !important;
+      }
+
+      .btnblue
+      {
+        background-color:#3498db;
+        color: #fff;
+        border:1px solid #236ea0;
+      }
+
+      .btndgray {
+          background-color: #ccc;
+          color: #fff;
+          border: 1px solid #afabab;
+       }
+
+       .btngreen
+      {
+        background-color:#2ecc71;
+        color:#fff !important;
+        border:1px solid #229653;
+      }
+
+      .btngray
+      {
+        background-color:#ecf0f1;
+        border:1px solid #d0d1d2;
+      }
+
+      .btnyellow
+      {
+        background-color:#f1c40f;
+        color:#fff !important;
+        border:1px solid #c1a225;
+      }
+      .mr-r1
+      {
+        margin-right: 1rem;
+      }
+
+        .btnedit
+      {
+       min-width:50px;
+        color:#2ecc71 !important;
+        border:1px solid #2ecc71;
+      }
+
+        .btndelete
+      {
+        min-width:50px;
+        color:#d80027 !important;
+        border:1px solid #d80027;
+      }
+
+  }  
+  table {
+  width: 100%;
+}
+
+.first-header-row th {
+  
+}
+
+.second-header-row th{
+  border-bottom: none;
+}
+
+.example-first-footer-row {
+  font-weight: bold;
+}
+
+.example-second-footer-row td {
+  color: #900000;
+}   
+}

@@ -1,0 +1,100 @@
+
+<div fxFlex>
+<mat-toolbar class="p-0">
+
+    
+    <div fxFlex fxFill fxLayout="row" fxLayoutAlign="center center">
+
+        <div fxFlex="60" fxLayout="column" fxLayoutAlign="center start">
+             <div fxFlex="1 0 auto" fxLayout="row">
+                    <button mat-icon-button class="toggle-button-navbar"
+                    *ngIf="!noNav && authService.currentUser.name"
+                    (click)="toggleSidebarOpened('navbar')" fxHide.gt-sm>
+                        <mat-icon>menu</mat-icon>
+                    </button>
+
+                    <button mat-icon-button class="toggle-button-navbar"
+                            *ngIf="!noNav && authService.currentUser.name"
+                            (click)="toggleSidebarFolded('navbar')" fxHide fxShow.gt-sm>
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <a class="logo" [routerLink]="['/']">Backup Server</a>
+                <div *ngIf="authService.currentUser.name" fxFlex="1 0 auto" fxLayout="row">    
+                    <form  fxLayout="row" class="example-form" fxFlex>
+                  <mat-form-field class="full-width">
+                    <input type="text" matInput placeholder="search">
+                    <mat-icon matSuffix>search</mat-icon>
+                  </mat-form-field>                  
+                  </form>
+                </div>
+             </div>
+            
+            
+
+        </div>
+       <div class="" fxFlex="20" fxLayout="column" fxLayoutAlign="center end">
+            
+                   <button mat-button fxHide fxShow.gt-xs
+                    class="language-button"
+                    [matMenuTriggerFor]="languageMenu">
+                        <div fxLayout="row" fxLayoutAlign="center center">
+                             <span class="iso text-capitalize mr-8">{{selectedLanguage.id}}</span>
+                            <img class="flag mr-8" [src]="'assets/images/flags/'+selectedLanguage.flag+'.png'">
+                           
+                        </div>
+                    </button>
+
+                    <mat-menu #languageMenu="matMenu" [overlapTrigger]="false">
+
+                        <button mat-menu-item *ngFor="let lang of languages" (click)="setLanguage(lang)">
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <img class="flag mr-16" [src]="'assets/images/flags/'+lang.flag+'.png'">
+                                <span class="iso">{{lang.title}}</span>
+                            </div>
+                        </button>
+
+                    </mat-menu>
+
+       </div>
+        <div *ngIf="authService.currentUser.name" class="" fxFlex="20" fxLayout="column" fxLayoutAlign="center end">
+
+            <button mat-button [matMenuTriggerFor]="userMenu"
+                    class="user-button">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <img class="avatar" src="assets/images/avatars/profile.jpg">
+                    <span class="username mr-12" fxHide fxShow.gt-sm>{{authService.currentUser.name}}</span>
+                    <mat-icon class="s-16" fxHide.xs>keyboard_arrow_down</mat-icon>
+                </div>
+            </button>
+
+            <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+
+                <button mat-menu-item>
+                    <mat-icon>account_circle</mat-icon>
+                    <span>{{'admin.profile' | translate}}</span>
+                </button>
+
+                <button mat-menu-item class="">
+                    <mat-icon>mail</mat-icon>
+                    <span>{{'admin.inbox' | translate}}</span>
+                </button>
+
+                <button (click)="logout()" mat-menu-item class="">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>{{'admin.logout' | translate}}</span>
+                </button>
+
+            </mat-menu>
+
+   
+
+           
+
+        </div>
+    </div>
+
+    
+</mat-toolbar>
+
+
+</div>

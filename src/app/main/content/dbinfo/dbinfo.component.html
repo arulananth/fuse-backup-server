@@ -1,0 +1,166 @@
+<div class="page-layout blank" id="adminforms-wrapper">
+   <!-- form content/-->
+    <div class="admin-content">
+        <div class="admin-main-wrapper">
+            <mat-expansion-panel [expanded]="true" [disabled]="true">
+
+                <!-- main panal-title -->
+                <mat-expansion-panel-header class="panelHeader">
+                    <mat-panel-title class="main-tille">
+                        <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column" fxFlex>
+                            <div fxFlex="50" fxLayoutAlign="center start" fxLayout="column" fxLayoutAlign.xs="center center">
+                              {{'dbinfo.head' | translate}}
+                            </div>
+                            <div fxFlex="50" fxLayoutAlign="center end" fxLayout="column" fxLayoutAlign.xs="center center">
+                              <button mat-button class="user-button exp-button" (click)="openTop()">
+                                <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+                                   <mat-icon class="s-16 mr-12">add_circle_outline</mat-icon>
+                                    <span class="username">{{'dbinfo.adddb' | translate}}</span>
+                                    
+                                </div>
+                               </button>
+                            </div>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- end title -->
+                <!-- main form-start -->
+
+                <div class="admin-main-form mr-tb5  m-pad1">
+                    <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                    	<div fxFlex="100" fxLayoutAlign="center center" [fxLayout]="'row'" fxLayoutAlign.xs="center center">
+<div fxFlex="100">
+  <div [fxLayout]="'row wrap'" fxLayout.xs="column" class="form-back"> 
+   <div fxFlex="70" fxLayout="column">
+      <div class="admin-form-controll pad-r10">
+      <mat-form-field>{{'dbinfo.verify' | translate}}
+        <mat-label></mat-label>
+          <mat-select [(value)]="instance" (selectionChange)="changeInstance(instance)" placeholder="Select">
+            <mat-option value="0">Select Instance</mat-option>
+            <mat-option *ngFor="let chain of chainInstance" value="{{chain.inst_id}}">{{chain.inst_name}}</mat-option>
+          </mat-select>
+       </mat-form-field>
+      </div>
+    </div>
+
+    
+    
+  </div>
+               
+           <!-- table --->
+                  <table mat-table [dataSource]="dataSource" >
+                    <!-- Item Column -->
+                    <ng-container matColumnDef="index">
+                      <th mat-header-cell *matHeaderCellDef>{{'common.No' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction;let i=index" data-label="No"> {{i+1}} </td>
+                     
+                    </ng-container>
+                     <!-- Cost Column -->
+                    <ng-container matColumnDef="inst_key">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbtype' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Type"> {{transaction.inst_key}} </td>
+                      
+                    </ng-container>
+                    <!-- Cost Column -->
+                    <ng-container matColumnDef="db_types_key">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbtype' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Type"> {{transaction.db_types_key}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_driver_key">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbdriver' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Driver"> {{transaction.db_driver_key}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="short_name">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.name' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="Name"> {{transaction.short_name}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_name">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbname' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Name"> {{transaction.db_name}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_user">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbusername' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB UserName"> {{transaction.db_user}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_pass">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbpassword' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Password"> {{transaction.db_pass}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_server">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbserver' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Server"> {{transaction.db_server}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_port">
+                      <th mat-header-cell *matHeaderCellDef>{{'dbinfo.dbport' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="DB Port"> {{transaction.db_port}} </td>
+                      
+                    </ng-container>
+                    <ng-container matColumnDef="db_status">
+                      <th mat-header-cell *matHeaderCellDef>{{'common.Status' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction" data-label="Status"> {{'verifychain.'+transaction.db_status|translate}} </td>
+                      
+                    </ng-container>
+
+
+
+                    <ng-container matColumnDef="db_det_id">
+                      <th mat-header-cell *matHeaderCellDef class="wi150px">{{'common.Action' | translate}}</th>
+                      <td mat-cell *matCellDef="let transaction;let c=index" data-label="Action" class="text-right">
+
+                          <button mat-button class="user-button btnedit mr-br mr-r1" (click)="openEdit(transaction,c)">
+                            
+                               <mat-icon class="s-16">edit</mat-icon>
+                            
+                          </button>
+                        <button mat-button class="user-button btndelete mr-br mr-r1" (click)="openDelete(transaction,c)">
+                         
+                             <mat-icon class="s-16">delete</mat-icon>
+                            
+                        </button>
+                       
+                      </td>
+                      
+                    </ng-container>
+
+                    
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                        class="first-header-row">
+                    </tr>
+                   
+
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;let i = index"  class="table-content-row"></tr>
+
+
+                  </table>
+
+           <!-- table-->
+</div>
+        </div>
+
+                    </div>
+                </div>
+                <!-- main form-end -->
+            
+            </mat-expansion-panel>
+        </div>
+
+    </div><!-- form content/-->
+
+
+
+
+
+    <div >
+
+    </div>
+</div>
+
+
+

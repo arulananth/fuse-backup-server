@@ -1,0 +1,45 @@
+:host{
+
+    .page-layout{
+        margin:2rem 1rem 2rem 1rem;
+        position: relative;
+        overflow-x: initial;
+        overflow-y: initial;
+       .pd-5
+       {
+       	 padding:5px;
+       }
+       .pd-20
+       {
+       	padding:20px;
+       }
+       .mr-tb-20
+       {
+        margin-top:1rem;
+        margin-bottom:1rem;
+       }
+       .login-page
+       {
+          border:1px solid #000;
+          border-radius:10px;
+       }
+       .login-forms
+       {
+          width:100%;
+       }
+    } 
+
+     .admin-form-controll 
+              {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 auto;
+                position: relative;
+              }
+
+              .btngreen {
+              background-color: #2ecc71;
+              color: #fff !important;
+              border: 1px solid #2ecc71;
+          }
+}

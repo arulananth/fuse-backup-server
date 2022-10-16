@@ -1,0 +1,75 @@
+$panal-clor :#f78411;
+$test : #ffffff;
+
+#sample-wrapper {
+    .sample-content {
+        display: flex;
+        flex: 1 1 auto;
+        padding: 32px;
+        min-width: 0;
+        @media only screen and (max-width: 767px){
+            padding: 20px;
+        } 
+        
+        .sample-main-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-width: 0;
+
+            .panelHeader{
+                background-color: $panal-clor;
+        
+                .main-tille{
+                    color: $test;
+                    font-size: 1.8rem;
+                }
+            }
+            .sample-main-form{
+                margin-top: 15px;
+            }
+                
+            .sample-data-table{
+                margin-top: 15px;
+
+                .mat-elevation-z8{
+                    overflow-x: auto;
+
+                    table {
+                        width: 100%;
+                        tr{
+                            th{
+                                text-align: center;
+                                padding: 10px;
+                            }
+                            td{
+                                padding: 10px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }            
+        }    
+    } 
+}    
+
+.sample-form-controll {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .sample-button-option-row {
+    display: block;
+    >button {
+      margin-right: .5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    button {
+      margin-bottom: .5rem;
+    }
+  }  

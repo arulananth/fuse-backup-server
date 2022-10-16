@@ -1,0 +1,101 @@
+<!-- modal dialog-->
+<div id="admin-wrapper">
+ <form class="admin-form" [formGroup]="addedForm">
+  <!-- modal header-->
+  <div fxLayout="row" fxLayoutGap="2%">
+      <div fxFlex="93%">
+        <h2 mat-dialog-title class="fwt100">{{'dbverify.heads' | translate}}</h2>
+      </div>
+      <div fxFlex="5%">
+        <mat-dialog-actions>
+          <button mat-dialog-close class="close-btn">
+            <mat-icon class="s-16 mr-5">close</mat-icon>
+          </button>
+        </mat-dialog-actions>
+      </div>
+  </div><!-- modal header / -->
+
+  <mat-divider></mat-divider>
+    
+  
+  <mat-dialog-content>
+    <!-- modal content / -->
+    <div class="admin-content mr-t2">
+      <div class="admin-main-wrapper admin-upload">
+          
+                
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                     <div class="admin-form-controll pad-r10">
+                      <mat-label>{{'dbverify.Table Name' | translate}}</mat-label>
+                      <mat-form-field>
+                          <mat-select formControlName="tname" required>
+                            <mat-option value="1">{{'common.enable' | translate}}</mat-option>
+                            <mat-option value="2">{{'common.disable' | translate}}</mat-option>
+                           
+                          </mat-select>
+                          <mat-error *ngIf="submitted && f.tname.errors">{{'dbverify.tnameenable' | translate}}</mat-error>
+                       </mat-form-field>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                        <mat-label>{{'dbverify.fields' | translate}}</mat-label>
+                          <mat-form-field>
+                          <mat-select placeholder="" [formControl]="fields" multiple>
+                            <mat-select-trigger>
+                              {{fields.value ? fields.value[0] : ''}}
+                              <span *ngIf="fields.value?.length > 1" class="example-additional-selection">
+                                (+{{fields.value.length - 1}} {{fields.value?.length === 2 ? 'other' : 'others'}})
+                              </span>
+                            </mat-select-trigger>
+                            <mat-option *ngFor="let fields of fieldsList" [value]="fields">{{fields}}</mat-option>
+                          </mat-select>
+                          <mat-error *ngIf="submitted && f.fields.errors">{{'dbverify.fieldse' | translate}}</mat-error>
+                        </mat-form-field>
+                          
+                      </div>
+                    </div>
+              </div>
+          </div>
+        
+         
+            
+        </div>
+    </div><!-- modal content/ -->
+
+    <mat-divider></mat-divider>
+
+    <!-- modal footer/ -->
+    <div class="admin-footer">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" class="bgs">
+        <div fxFlex="100" fxLayoutAlign="end center" fxLayoutAlign.xs="center center" [fxLayout]="'row wrap'">
+          <!--btn 1-->
+            <button type="button" mat-button class="user-button btngray mr-br mr-r1 mbl-mr-tb" (click)="onNoClick()" type="button">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">clear</mat-icon>
+                <span class="username">{{'common.clear' | translate}}</span>
+            </div>
+           </button><!--btn 1 /-->
+          
+           <!--btn 3-->
+          <button type="submit" mat-button class="user-button btngreen mr-br mr-r1"  (click)="onSubmit()">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">save</mat-icon>
+                <span class="username">{{'common.save' | translate}}</span>
+            </div>
+           </button><!--btn 3/-->
+        </div>
+      </div>
+    </div><!-- modal footer/ -->
+
+
+  </mat-dialog-content>
+</form>
+</div><!-- modal dialog/-->

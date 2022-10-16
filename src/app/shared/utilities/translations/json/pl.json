@@ -1,0 +1,104 @@
+{
+    "NAV": {
+        "APPLICATIONS": "Programlar",
+        "SAMPLE"        : {
+            "TITLE": "Örnek",
+            "BADGE": "15"
+        }
+    },
+    "admin":{
+        "head":"Administrator T",
+        "db":"DB Verify Control Panel T",
+        "profile":"Profile T",
+        "inbox":"Inbox T",
+        "logout":"Logout T"
+    },
+    "common":{
+            "save":"Save",
+            "clear":"Clear",
+            "delete":"Delete",
+            "submit":"Submit",
+            "enable":"Enable",
+            "disable":"Disable",
+            "No":"No",
+            "Status":"Status",
+            "Action":"Action",
+            "enordis":"Enable or Disable",
+            "please":"Please Enter"
+    },
+    "LOGIN": {
+            "LHEAD": "DB Verify Control Panel-t",
+            "LBUTTON":"SUBMIT-t",
+            "email":"Email-t",
+            "password":"Password-t",
+            "remember":"Remember Me-t",
+            "emailerror":"Email is Required-t",
+            "passerror":"Password is Required-t",
+            "validemail":"Please Enter Valid Email Address-t"
+        },
+        "verifychain": {
+            "verifychaininstance": "Verify Chain Instance-t",
+            "addchain":"Add Chain Instance-t",
+             "editchain":"Edit Chain Instance-t",
+            "No":"No-t",
+            "InstanceName":"Instance Name-t",
+            "CreatedDate":"Created Date-t",
+            "Status":"Status-t",
+            "Action":"Action-t",
+            "DBStatus":"DB Status",
+            "VerifyInstanceName":"Verify Instance Name",
+            "InstanceKey":"Instance Key",
+            "DBStatuse":"Please Select DB Status",
+            "VerifyInstanceNamee":"Please enter Verify Instance Name",
+            "InstanceKeye":"Please Enter Instance Key"
+            
+        },
+        "dbverify":{
+            "DB Verification Report Setting":"DB Verification Report Setting T",
+            "New Custom Log Report":"New Custom Log Report",
+            "Verify Instance":"Verify Instance",
+            "Table Name":"Table Name",
+            "Field to Show on Report":"Field to Show on Report"
+        },
+        "dbinfo":{
+            "head":"DB Information T",
+            "adddb":"Setup New DB Info",
+            "editdb":"Edit New DB Info",
+            "dbtype":"DB Type",
+            "dbdriver":"DB Driver",
+            "name":"Name",
+            "dbname": "DB Name",
+            "dbusername":"DB Username",
+            "dbpassword":"DB Password",
+            "dbserver":"DB Server",
+            "dbport":"DB PORT",
+            "dbstatus":"DB Status",
+            "sname":"Short Name",
+            "verify":"Verify Chain Instance"
+
+        },
+        "dbtrigger":{
+            "head":"DB Trigger T",
+            "adddb":"Setup New DB Trigger",
+            "editdb":"Edit New DB Trigger",
+            "triggername":"Trigger Name",
+            "tablename":"Table Name",
+            "attribute":"Attribute"
+        },
+         "dbreport":{
+            "head":"DB Verification Report Setting T",
+            "verification":"Verification Accuracy",
+            "accuracy":"Accuracy",
+            "field1":"Field 1",
+            "field2":"Field 2",
+            "field3":"Field 3",
+            "field4":"Field 4",
+            "field5":"Field 5",
+            "field6":"Field 6",
+            "field7":"Field 7",
+            "field8":"Field 8",
+            "field9":"Field 9",
+            "new":"Set up New DB Info"
+
+        }
+}

@@ -1,0 +1,14 @@
+<div   class="dashcard ">
+    <div fxFlex="100" fxLayout="row"  fxLayoutAlign="center center" [style.background]="dashData?.colorLight" class="pd-20 cwhite br-tr3">        
+        {{dashData?.title}}
+    </div>
+    <div  fxFlex="100" fxLayout="row" fxLayoutAlign="center center" [style.background]="dashData?.colorDark" class="pd-20 cwhite br-br3 font4">
+              <div fxFlex="1 0 auto" fxLayout="column" fxLayoutAlign="center start">
+                  <mat-icon  class="cardIcon font4">{{dashData?.icon}}</mat-icon>
+              </div>
+               <div fxFlex="0 1 auto" fxLayout="column" fxLayoutAlign="center end">
+                   {{dashData?.number}}
+               </div>
+       
+    </div>
+</div>

@@ -1,0 +1,73 @@
+@import 'src/@fuse/scss/fuse';
+
+:host /deep/
+ {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    z-index: 4;
+
+.mat-button-focus-overlay {
+  background: none;
+}
+    .mat-toolbar {
+        background: inherit;
+        color: inherit;
+        position: relative;
+
+        .loading-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+    }
+    .example-form
+    {
+        margin-left:30%;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .logo-icon {
+            width: 80px;
+            @include media-breakpoint-down('xs') {
+                width: 50px;
+             }
+        }
+    }
+
+    .user-button,
+    fuse-search-bar,
+    .language-button,
+    .quick-panel-toggle-button {
+        min-width: 64px;
+        height: 64px;
+
+        @include media-breakpoint-down('xs') {
+            height: 56px;
+        }
+    }
+
+    .toggle-button-navbar {
+        min-width: 56px;
+        height: 56px;
+    }
+
+    .toolbar-separator {
+        height: 64px;
+        width: 1px;
+        background: rgba(0, 0, 0, .12);
+
+        @include media-breakpoint-down('xs') {
+            height: 56px;
+        }
+    }
+    .mat-help
+    {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+}

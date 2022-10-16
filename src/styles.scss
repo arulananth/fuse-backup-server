@@ -1,0 +1,334 @@
+// Import Fuse core library
+@import "@fuse/scss/core";
+
+
+
+
+  .main-mr-tb1
+  {
+    margin-bottom:0.5rem;
+    margin-top:0.5rem;
+  }
+
+fuse-main > .mat-sidenav-container > .mat-sidenav-content, fuse-main > .mat-sidenav-container > .mat-drawer-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: auto !important;
+}
+
+#wrapper .content-wrapper fuse-content
+{
+	overflow:auto !important;
+}
+
+.fwt100
+    {
+      font-weight: 100;
+    }
+@media only screen and (max-width: 560px){
+      .mbl-mr-tb
+      {
+        margin-top:0.5rem !important;
+        margin-bottom:0.5rem !important;
+      }
+} 
+
+.mat-input-underline {
+    background-color: #FF0000;
+}
+
+ .mat-expansion-panel-header.panelHeader{
+   border-top-left-radius:3px !important;
+   border-top-right-radius:3px !important;
+}
+.mat-form-field-appearance-outline 
+{
+  .mat-form-field-label {
+   
+      margin-top: 0em;
+  }
+}
+
+#admin-wrapper{
+   .admin-content{
+     .admin-main-wrapper 
+     {
+
+          border-left: 1px solid #e6e6e6;
+          border-right: 1px solid #e6e6e6;
+          &.admin-upload
+          {
+            border:none !important;
+          }
+      }
+   }
+   .mr-top{
+      margin-top:37px !important;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{ #admin-wrapper .m-pad1 {
+    padding: 1rem;
+}
+}
+
+.pad30
+{
+  padding-left:30px;
+  padding-right:30px;
+  margin-bottom: 3rem;
+}
+
+.success-msg
+{
+    background-color: #2ecc71;
+    color: #fff !important;
+    border: 1px solid #229653;
+    font-size:2rem;
+    p{
+          margin-top: 0px;
+          margin-bottom: 0px;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+    }
+}
+ 
+.pad-r10
+{
+  padding-right: 10px;
+}
+.pad-l10
+{
+  padding-left: 10px;
+}
+.pad-lr3-rem
+{
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+    border-color: transparent;
+}
+.mat-form-field-appearance-outline {
+  .mat-form-field-outline-thick 
+  {
+          .mat-form-field-outline-gap
+          {
+            border-width:1px !important
+          }
+  }
+
+}
+
+
+
+@media screen and (min-width: 961px) {
+
+  .wi150px
+  {
+    width:150px !important;
+  }
+  .second-header-row
+{
+  
+    td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child{
+      padding-left:24px;
+    }
+
+    td.mat-cell:last-child, td.mat-footer-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 24px;
+    }
+}
+.first-header-row
+{
+  th{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child
+  {
+    padding-left:24px;
+  }
+  td.mat-cell:last-child, td.mat-footer-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 24px;
+   }
+}
+.table-content-row
+{
+  td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child
+  {
+    padding-left:24px;
+  }
+  td.mat-cell:last-child, td.mat-footer-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 24px;
+ }
+}
+
+}
+@media screen and (max-width: 960px) {
+
+
+ .second-header-row
+{
+  
+    td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child{
+      padding-left:0px;
+    }
+
+    td.mat-cell:last-child, td.mat-footer-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 0px;
+    }
+}
+.first-header-row
+{
+  th{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child
+  {
+    padding-left:0px;
+  }
+  td.mat-cell:last-child, td.mat-footer-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 0px;
+   }
+}
+.table-content-row
+{
+  td.mat-cell:first-child, td.mat-footer-cell:first-child, th.mat-header-cell:first-child
+  {
+    padding-left:0px;
+  }
+  td.mat-cell:last-child, td.mat-footer-cell:last-child, th.mat-header-cell:last-child {
+    padding-right: 0px;
+ }
+}
+.second-header-row
+{
+    th{
+      display: block;
+      width:100%;
+    }
+
+    
+}
+.first-header-row
+{
+  display: none;
+
+}
+  .mat-table {
+    border: 0;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+  
+  /*  Enable this to hide header
+  .mat-table .mat-header-cell {
+    
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  */
+  .mat-table .mat-row {
+    
+  }
+  /*
+  .mat-table .mat-row:nth-child(even) {background: #CCC}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+  */
+  .mat-table .mat-cell, .mat-table .mat-footer-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: right;
+    font-weight: bold;
+    min-height:30px;
+    height:auto;
+    margin-bottom: 4%;
+  }
+
+   .mat-table .mat-cell.height-auto {
+   
+    height:auto !important;
+    
+  }
+  .mat-table .mat-cell:before{
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    font-size: .85em;
+  }
+
+ mat-table .mat-footer-cell:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: 'footer head';
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    font-size: .85em;
+  }
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+    .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
+}
+
+
+ .mat-filters
+  {
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+  }
+
+
+   .btndgreen
+    {
+     background-color:  #3d4151;
+     border: 1px solid #3d4151;
+        color: #fff;
+    }
+    .form-back
+    {
+    padding: 15px;
+    box-shadow: 0 0 20px #ccc;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    .mr-form
+    {
+      margin-top:1rem !important;
+      margin-bottom:1rem !important;
+    }
+
+    .nowrap
+    {
+      white-space: nowrap !important;
+    }

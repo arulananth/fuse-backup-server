@@ -1,0 +1,45 @@
+<mat-sidenav-container>
+
+    <div id="fuse-main-content">
+
+        <!-- TOOLBAR-->
+        <ng-container>
+            <fuse-toolbar class="above" [ngClass]="fuseSettings.colorClasses.toolbar"></fuse-toolbar>
+        </ng-container>
+        <!-- / TOOLBAR-->
+
+        
+
+        <div id="wrapper">
+          <ng-container *ngIf="authService.currentUser.name">
+            <!-- NAVBAR component -->
+            <fuse-sidebar [name]="'navbar'"
+                          [folded]="fuseSettings.layout.navigationFolded"
+                          [lockedOpen]="'gt-sm'"
+                          class="left-navbar" [ngClass]="fuseSettings.colorClasses.navbar"
+                          *ngIf="fuseSettings.layout.navigation === 'left' || fuseSettings.layout.navigation === 'top'">
+                <fuse-navbar layout="vertical"></fuse-navbar>
+            </fuse-sidebar>
+          </ng-container>
+            <!-- NAVBAR component -->
+
+            <div class="content-wrapper">
+
+              <!-- subheader component -->
+                <ng-container>
+                    <fuse-subheader class="below" [ngClass]="fuseSettings.colorClasses.navbar"></fuse-subheader>
+                </ng-container>
+                 <!-- subheader component -->
+
+                <fuse-content></fuse-content>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</mat-sidenav-container>

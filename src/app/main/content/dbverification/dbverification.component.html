@@ -1,0 +1,157 @@
+
+<div class="page-layout blank" id="adminforms-wrapper" *ngIf="allInstance.length>0">
+   <!-- form content/-->
+    <div class="admin-content">
+        <div class="admin-main-wrapper">
+            <mat-expansion-panel [expanded]="true" [disabled]="true">
+
+                <!-- main panal-title -->
+                <mat-expansion-panel-header class="panelHeader">
+                    <mat-panel-title class="main-tille">
+                        <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column" fxFlex>
+                            <div fxFlex="50" fxLayoutAlign="center start" fxLayout="column" fxLayoutAlign.xs="center center">
+                              {{'dbverify.DB Verification Report Setting' | translate}} 
+                            </div>
+                            <div fxFlex="50" fxLayoutAlign="center end" fxLayout="column" fxLayoutAlign.xs="center center">
+                              <mat-progress-bar *ngIf="!allTables.status || allInstance.length==0" mode="buffer"></mat-progress-bar>
+                              <button *ngIf="allTables.status && allInstance.length>0" mat-button class="user-button exp-button" (click)="openTop()">
+                                <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+                                   <mat-icon class="s-16 mr-12">add_circle_outline</mat-icon>
+                                    <span  class="username">{{'dbverify.New Custom Log Report' | translate}}</span>
+                                    
+                                </div>
+                               </button>
+                            </div>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- end title -->
+                <!-- main form-start -->
+
+                <div class="admin-main-form mr-tb5  m-pad1">
+                    <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                    	<div fxFlex="100" fxLayoutAlign="center center" [fxLayout]="'row'" fxLayoutAlign.xs="center center">
+<div fxFlex="100" *ngIf="allInstance.length>0">
+  <div [fxLayout]="'row wrap'" fxLayout.xs="column" class="form-back"> 
+   
+    <div fxFlex="70" fxLayout="column">
+      <div class="admin-form-controll pad-r10">
+      <mat-form-field>
+        <mat-label>{{'dbverify.Verify Instance' | translate}}</mat-label>
+          <mat-select placeholder="Select" [(ngModel)]="SearchInstance" (selectionChange)="InstanceChange(SearchInstance)">
+            <mat-option *ngFor="let ins of allInstance" value="{{ins.inst_id}}">{{ins.inst_name}}</mat-option>
+           
+          </mat-select>
+       </mat-form-field>
+      </div>
+    </div>
+
+
+    <div fxFlex="70" fxLayout="column">
+       <div class="admin-form-controll pad-r10">
+                  <mat-form-field class="full-width">
+                    <input type="text" [(ngModel)]="SearchText" matInput placeholder="search">
+                    <mat-icon matSuffix>search</mat-icon>
+                  </mat-form-field>                  
+       </div>
+    </div>
+    
+    
+  </div>
+           <!-- table --->
+                    <table mat-table [dataSource]="dataSource" *ngIf="allInstance.length>0">
+                      <!-- Item Column -->
+                      <ng-container matColumnDef="th1">
+                        <th mat-header-cell *matHeaderCellDef>{{'common.No' | translate}}</th>
+                        <td mat-cell *matCellDef="let transaction;let i=index" data-label="No"> {{i+1}} </td>
+                       
+                      </ng-container>
+
+                      <!-- Cost Column -->
+                      <ng-container matColumnDef="th2">
+                        <th mat-header-cell *matHeaderCellDef>{{'dbverify.Table Name' | translate}}</th>
+                        <td mat-cell *matCellDef="let transaction" data-label="Table Name"> {{transaction.verification_table}} </td>
+                        
+                      </ng-container>
+
+                      <ng-container matColumnDef="th3">
+                        <th mat-header-cell *matHeaderCellDef>{{'dbverify.Field to Show on Report' | translate}}</th>
+                        <td mat-cell *matCellDef="let transaction" data-label="Field to Show on Report"> {{transaction.verification_fields}} </td>
+                        
+                      </ng-container> 
+                      
+
+
+                      <ng-container matColumnDef="th4">
+                        <th mat-header-cell *matHeaderCellDef class="wi150px">{{'common.Action' | translate}}</th>
+                        <td mat-cell *matCellDef="let transaction" data-label="Action">
+
+                          <button mat-button class="user-button btnedit mr-br mr-r1" (click)="openEdit()">
+                            
+                               <mat-icon class="s-16">edit</mat-icon>
+                            
+                          </button>
+                          <button mat-button class="user-button btndelete mr-br mr-r1" (click)="openDelete()">
+                           
+                               <mat-icon class="s-16">delete</mat-icon>
+                              
+                          </button>
+                         
+                        </td>
+                        
+                      </ng-container>
+
+                      <!-- Item Description Column -->
+                      <ng-container matColumnDef="item-no">
+                        <th mat-header-cell *matHeaderCellDef> 
+                          <div class="admin-form-controll pad-r10">
+                            <mat-form-field>
+                              <mat-select placeholder="Select">
+                                <mat-option value="1">1</mat-option>
+                              <mat-option value="2">2</mat-option>
+                              <mat-option value="3">3</mat-option>
+                              <mat-option value="4">4</mat-option>
+                              <mat-option value="5">5</mat-option>
+                            </mat-select>
+                            </mat-form-field> 
+                           </div>
+                        </th>
+                      </ng-container>
+
+                    
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"
+                          class="first-header-row">
+                      </tr>
+                      
+                     
+
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"  class="table-content-row"></tr>
+
+
+                    </table>
+
+           <!-- table-->
+</div>
+        </div>
+
+                    </div>
+                </div>
+                <!-- main form-end -->
+            
+            </mat-expansion-panel>
+        </div>
+
+    </div><!-- form content/-->
+
+
+
+
+
+
+    <div >
+
+    </div>
+</div>
+
+
+

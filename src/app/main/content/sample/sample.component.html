@@ -1,0 +1,116 @@
+<div class="page-layout blank" id="sample-wrapper">
+    <div class="sample-content">
+        <div class="sample-main-wrapper">
+            <mat-expansion-panel [expanded]="true">
+
+                <!-- main panal-title -->
+                <mat-expansion-panel-header class="panelHeader">
+                    <mat-panel-title class="main-tille">
+                        sample expansion panel
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- end title -->
+
+                <!-- main form-start -->
+                <div class="sample-main-form">
+                    <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column" fxLayout.sm="column">
+                        <div fxFlex="49%">
+                            <div class="sample-form-controll">
+                                <mat-form-field>
+                                    <mat-label> sample sample</mat-label>
+                                    <input matInput placeholder="sample" required>
+                                    <mat-icon matSuffix matTooltip="Account-Help">help</mat-icon>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+					
+					<div fxLayout="row" fxLayout.md="row" fxLayout.xs="column" fxLayout.sm="column">
+                        <div fxFlex="49%">
+                            <div class="sample-form-controll">
+                                <mat-form-field>
+                                    <mat-label> sample sample2</mat-label>
+                                    <input matInput placeholder="sample2" required>
+                                    <mat-icon matSuffix matTooltip="Account-Help">help</mat-icon>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+					
+					<div fxLayout="row" fxLayout.md="row" fxLayout.xs="column" fxLayout.sm="column">
+                        <div fxFlex="49%">
+                            <div class="sample-form-controll">
+                                <mat-form-field>
+                                    <mat-label> sample sample3</mat-label>
+                                    <input matInput placeholder="sample3" required>
+                                    <mat-icon matSuffix matTooltip="Account-Help">help</mat-icon>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">
+                    <div fxFlex="100%">
+                        <div class="sample-form-controll">
+                            <div class="sample-button-option-row">
+                                <button mat-raised-button id="btnCancel">
+                                    <mat-icon>clear</mat-icon> Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main form-end -->
+
+            </mat-expansion-panel>
+
+            <!-- main data table start -->
+            <div class="sample-data-table">
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource">
+
+                        <ng-container matColumnDef="number">
+                            <th mat-header-cell *matHeaderCellDef># </th>
+                            <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="sam1">
+                            <th mat-header-cell *matHeaderCellDef> Sample Head 1 </th>
+                            <td mat-cell *matCellDef="let element"> {{element.sam1}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="sam2">
+                            <th mat-header-cell *matHeaderCellDef> Sample Head 2 </th>
+                            <td mat-cell *matCellDef="let element"> {{element.sam2}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="sam3">
+                            <th mat-header-cell *matHeaderCellDef> Sample Head 3 </th>
+                            <td mat-cell *matCellDef="let element"> {{element.sam3}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="sam4">
+                            <th mat-header-cell *matHeaderCellDef>actions</th>
+                            <td mat-cell *matCellDef="let element"> {{element.sam4}}
+                                <div class="data-table-crude">
+                                    <button mat-icon-button (click)="openDelet()">
+                                        <mat-icon matTooltip="Delete">delete</mat-icon>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                </div>
+            </div>
+            <!-- end-data-table -->
+        </div>
+    </div>
+</div>

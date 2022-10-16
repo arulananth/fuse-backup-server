@@ -1,0 +1,124 @@
+{
+    "NAV": {
+        "APPLICATIONS": "Applications",
+        "SAMPLE"        : {
+            "TITLE": "Sample",
+            "BADGE": "25"
+        }
+    },
+    "close":"Close",
+    "default_http_error":"Try Again !",
+    "common":{
+
+       "close":"Close"
+    },
+    "admin":{
+        "head":"Administrator",
+        "db":"DB Verify Control Panel",
+        "profile":"Profile",
+        "inbox":"Inbox",
+        "logout":"Logout"
+    },
+    "common":{
+            "save":"Save",
+            "clear":"Clear",
+            "delete":"Delete",
+            "submit":"Submit",
+            "enable":"Enable",
+            "disable":"Disable",
+            "No":"No",
+            "Status":"Status",
+            "Action":"Action",
+            "enordis":"Enable or Disable",
+            "please":"Please Enter",
+            "confirm":"Confirm"
+    },
+    "LOGIN": {
+            "LHEAD": "DB Verify Control Panel",
+            "LBUTTON":"SUBMIT",
+            "email":"Email",
+            "token_error":"Token is Invalid",
+            "reset":"Reset Password",
+            "cpassword":"Confirm Password",
+            "password":"Password",
+            "forgotpassword":"Forgot Password?",
+            "remember":"Remember Me",
+            "emailerror":"Email is Required",
+            "passerror":"Password is Required",
+            "validemail":"Please Enter Valid Email Address"
+        },
+        "verifychain": {
+            "verifychaininstance": "Verify Chain Instance",
+            "addchain":"Add Chain Instance",
+            "editchain":"edit Chain Instance",
+            "No":"No",
+            "1":"Enable",
+            "2":"Disabled",
+            "InstanceName":"Instance Name",
+            "CreatedDate":"Created Date",
+            "Status":"Status",
+            "Action":"Action",
+            "DBStatus":"DB Status",
+            "VerifyInstanceName":"Verify Instance Name",
+            "InstanceKey":"Instance Key",
+            "DBStatuse":"Please Select DB Status",
+            "VerifyInstanceNamee":"Please enter Verify Instance Name",
+            "InstanceKeye":"Please Enter Instance Key"
+            
+        },
+        "dbverify":{
+            "DB Verification Report Setting":"DB Verification Report Setting",
+            "New Custom Log Report":"New Custom Log Report",
+            "Verify Instance":"Verify Instance",
+            "Table Name":"Table Name",
+            "Field to Show on Report":"Field to Show on Report",
+            "tnameenable":"Enable or Disable Table Name",
+            "fieldse":"Please Select Fields",
+            "heads":"Custom Report Details",
+            "fields":"Fields"
+        },
+        "dbinfo":{
+            "head":"DB Information",
+            "adddb":"Setup New DB Info",
+            "editdb":"Edit New DB Info",
+            "dbtype":"DB Type",
+            "dbdriver":"DB Driver",
+            "name":"Name",
+            "dbname": "DB Name",
+            "dbusername":"DB Username",
+            "dbpassword":"DB Password",
+            "dbserver":"DB Server",
+            "dbport":"DB PORT",
+            "dbstatus":"DB Status",
+            "sname":"Short Name",
+            "verify":"Verify Chain Instance"
+
+
+        },
+        "dbtrigger":{
+            "head":"DB Trigger",
+            "adddb":"Setup New DB Trigger",
+            "editdb":"Edit New DB Trigger",
+            "triggername":"Trigger Name",
+            "tablename":"Table Name",
+            "attribute":"Attribute",
+            "verify":"Verify Chain Instance",
+            "tables":"Tables"
+        },
+        "dbreport":{
+            "head":"DB Verification Report Setting",
+            "verification":"Verification Accuracy",
+            "accuracy":"Accuracy",
+            "field1":"Field 1",
+            "field2":"Field 2",
+            "field3":"Field 3",
+            "field4":"Field 4",
+            "field5":"Field 5",
+            "field6":"Field 6",
+            "field7":"Field 7",
+            "field8":"Field 8",
+            "field9":"Field 9",
+            "new":"Set up New DB Info"
+
+        }
+}

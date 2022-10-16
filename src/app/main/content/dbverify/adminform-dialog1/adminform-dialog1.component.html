@@ -1,0 +1,114 @@
+<!-- modal dialog-->
+<div id="admin-wrapper">
+ <form class="admin-form" [formGroup]="addedForm">
+  <!-- modal header-->
+  <div fxLayout="row" fxLayoutGap="2%">
+      <div fxFlex="93%">
+        <h2 mat-dialog-title class="fwt100">Loreum Ipsum</h2>
+      </div>
+      <div fxFlex="5%">
+        <mat-dialog-actions>
+          <button mat-dialog-close class="close-btn">
+            <mat-icon class="s-16 mr-5">close</mat-icon>
+          </button>
+        </mat-dialog-actions>
+      </div>
+  </div><!-- modal header / -->
+
+  <mat-divider></mat-divider>
+    
+  
+  <mat-dialog-content>
+    <!-- modal content / -->
+    <div class="admin-content mr-t2">
+      <div class="admin-main-wrapper admin-upload">
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">                
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                       
+                          <mat-form-field>
+                                   <mat-label>Loreum Ipsum</mat-label>
+                                    <input matInput placeholder="Loreum Ipsum" formControlName="field" required>
+                                     <mat-error *ngIf="submitted && f.field.errors">Please enter valid details</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                     
+                  </div>
+                  
+              </div>
+          </div><!--form-end /-->
+
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2 br-t-dotted pd-t2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">                
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                       
+                          <mat-form-field>
+                                   <mat-label>Loreum Ipsum</mat-label>
+                                    <input matInput placeholder="Loreum Ipsum" formControlName="field2" required>
+                                     <mat-error *ngIf="submitted && f.field2.errors">Please enter valid details</mat-error>
+                          </mat-form-field> 
+                          
+                      </div>
+                      
+                  </div>
+                  
+              </div>
+          </div><!--form-end /-->
+
+          <!--form-start -->
+          <div class="admin-main-form m-pad1 mr-b2 br-t-dotted pd-t2">
+              <div fxLayout="row" fxLayout.md="row" fxLayout.xs="column">                
+                  <div fxFlex="100" fxLayoutAlign="center center">
+                      <div class="admin-form-controll pad-r10">
+                          <mat-form-field>
+                                   <mat-label>Loreum Ipsum</mat-label>
+                                    <input matInput placeholder="Loreum Ipsum" formControlName="field1" required>
+                                     <mat-error *ngIf="submitted && f.field1.errors">Please enter valid details</mat-error>
+                          </mat-form-field>
+                          
+                      </div>
+                     
+                  </div>
+                  
+              </div>
+          </div><!--form-end /-->
+                
+         
+            
+        </div>
+    </div><!-- modal content/ -->
+
+    <mat-divider></mat-divider>
+
+    <!-- modal footer/ -->
+    <div class="admin-footer">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px" class="bgs">
+        <div fxFlex="100" fxLayoutAlign="end center" fxLayoutAlign.xs="center center" [fxLayout]="'row wrap'">
+          <!--btn 1-->
+            <button type="button" mat-button class="user-button btngray mr-br mr-r1 mbl-mr-tb" (click)="onNoClick()" type="button">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">clear</mat-icon>
+                <span class="username">Loreum Ipsum</span>
+            </div>
+           </button><!--btn 1 /-->
+          
+           <!--btn 3-->
+          <button type="submit" mat-button class="user-button btngreen mr-br mr-r1"  (click)="onSubmit()">
+            <div fxLayout="row" class="cwhite font13" fxLayoutAlign="center center">
+               <mat-icon class="s-16 mr-12">save</mat-icon>
+                <span class="username">Loreum Ipsum</span>
+            </div>
+           </button><!--btn 3/-->
+        </div>
+      </div>
+    </div><!-- modal footer/ -->
+
+
+  </mat-dialog-content>
+</form>
+</div><!-- modal dialog/-->
